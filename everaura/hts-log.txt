@@ -1,0 +1,20 @@
+HTTrack3.49-2+htsswf+htsjava launched on Tue, 13 May 2025 18:59:20 at https://html.vecurosoft.com/luxrio/demo/index.html +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F  -%l "en, *" https://html.vecurosoft.com/luxrio/demo/index.html -O1 "C:\Users\User\OneDrive\Desktop\Projects Web\EVERAURA\everaura" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+19:00:20	Error: 	"Not Found" (404) at link https://html.vecurosoft.com/luxrio/demo/products-grid.html (from https://html.vecurosoft.com/luxrio/demo/index.html)
+19:00:33	Error: 	"Not Found" (404) at link https://html.vecurosoft.com/luxrio/demo/assets/fonts/fa-brands-400.ttf (from https://html.vecurosoft.com/luxrio/demo/assets/css/fontawesome.min.css)
+19:00:33	Error: 	"Not Found" (404) at link https://html.vecurosoft.com/luxrio/demo/assets/fonts/fa-duotone-900.ttf (from https://html.vecurosoft.com/luxrio/demo/assets/css/fontawesome.min.css)
+19:00:33	Error: 	"Not Found" (404) at link https://html.vecurosoft.com/luxrio/demo/assets/fonts/fa-light-300.ttf (from https://html.vecurosoft.com/luxrio/demo/assets/css/fontawesome.min.css)
+19:00:33	Error: 	"Not Found" (404) at link https://html.vecurosoft.com/luxrio/demo/assets/fonts/fa-regular-400.ttf (from https://html.vecurosoft.com/luxrio/demo/assets/css/fontawesome.min.css)
+19:00:33	Error: 	"Not Found" (404) at link https://html.vecurosoft.com/luxrio/demo/assets/fonts/fa-solid-900.ttf (from https://html.vecurosoft.com/luxrio/demo/assets/css/fontawesome.min.css)
+19:00:33	Error: 	"Not Found" (404) at link https://html.vecurosoft.com/luxrio/demo/assets/fonts/fa-thin-100.ttf (from https://html.vecurosoft.com/luxrio/demo/assets/css/fontawesome.min.css)
+19:00:33	Error: 	"Not Found" (404) at link https://html.vecurosoft.com/luxrio/demo/assets/fonts/fa-v4compatibility.ttf (from https://html.vecurosoft.com/luxrio/demo/assets/css/fontawesome.min.css)
+19:00:33	Error: 	"Not Found" (404) at link https://html.vecurosoft.com/luxrio/demo/single-project.html (from https://html.vecurosoft.com/luxrio/demo/blog-details.html)
+
+HTTrack Website Copier/3.49-2 mirror complete in 1 minutes 13 seconds : 292 links scanned, 282 files written (16990411 bytes overall) [15160082 bytes received at 207672 bytes/sec], 2380718 bytes transferred using HTTP compression in 34 files, ratio 19%, 41.7 requests per connection
+(9 errors, 0 warnings, 0 messages)
