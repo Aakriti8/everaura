@@ -181,13 +181,6 @@ button {
     transition: all ease 0.4s
 }
 
-.header-logo {
-    min-height: 250px;
-    width: 250px;
-    overflow: hidden;
-    padding-top: 100px;
-}
-
 img {
     border: none;
     height: 100%;
