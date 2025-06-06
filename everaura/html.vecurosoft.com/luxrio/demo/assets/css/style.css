@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 :root {
     --theme-color: #ff3e01;
     --title-color: #021210;
@@ -182,10 +181,10 @@ button {
     transition: all ease 0.4s
 }
 
-.header-logo{
+.header-logo {
     min-height: 250px;
     width: 250px;
-    overflow:hidden;
+    overflow: hidden;
     padding-top: 100px;
 }
 
@@ -295,32 +294,26 @@ h6 {
 }
 
 @media (max-width:1199px) {
-
     .h1,
     h1 {
         font-size: 40px
     }
-
     .h2,
     h2 {
         font-size: 36px
     }
-
     .h3,
     h3 {
         font-size: 30px
     }
-
     .h4,
     h4 {
         font-size: 24px
     }
-
     .h5,
     h5 {
         font-size: 20px
     }
-
     .h6,
     h6 {
         font-size: 16px
@@ -328,32 +321,26 @@ h6 {
 }
 
 @media (max-width:767px) {
-
     .h1,
     h1 {
         font-size: 36px
     }
-
     .h2,
     h2 {
         font-size: 30px
     }
-
     .h3,
     h3 {
         font-size: 26px
     }
-
     .h4,
     h4 {
         font-size: 22px
     }
-
     .h5,
     h5 {
         font-size: 18px
     }
-
     .h6,
     h6 {
         font-size: 16px
@@ -646,7 +633,6 @@ ul.wp-block-rss a {
 }
 
 @media (max-width:782px) {
-
     .logged-in .will-sticky .sticky-active.active,
     .logged-in .preloader .vs-btn {
         top: 46px
@@ -654,7 +640,6 @@ ul.wp-block-rss a {
 }
 
 @media (max-width:600px) {
-
     .logged-in .will-sticky .sticky-active.active,
     .logged-in .preloader .vs-btn {
         top: 0
@@ -878,7 +863,6 @@ ul.wp-block-rss a {
 }
 
 @media (max-width:1199px) {
-
     .blog-single.format-quote:before,
     .blog-single.format-link:before,
     .blog-single.tag-sticky-2:before,
@@ -886,7 +870,6 @@ ul.wp-block-rss a {
         font-size: 14px;
         padding: 8px 16px
     }
-
     .blog-single.format-quote .blog-content,
     .blog-single.format-link .blog-content,
     .blog-single.tag-sticky-2 .blog-content,
@@ -896,7 +879,6 @@ ul.wp-block-rss a {
 }
 
 @media (max-width:767px) {
-
     .blog-single.format-quote:before,
     .blog-single.format-link:before,
     .blog-single.tag-sticky-2:before,
@@ -904,7 +886,6 @@ ul.wp-block-rss a {
         font-size: 14px;
         padding: 8px 16px
     }
-
     .blog-single.format-quote .blog-content,
     .blog-single.format-link .blog-content,
     .blog-single.tag-sticky-2 .blog-content,
@@ -918,18 +899,15 @@ ul.wp-block-rss a {
         max-width: 100%;
         margin-bottom: 20px
     }
-
     .wp-block-latest-comments {
         padding-left: 10px
     }
-
     .page--content.clearfix+.vs-comment-form {
         margin-top: 24px
     }
 }
 
 @media only screen and (min-width:1300px) {
-
     .container-xxl,
     .container-xl,
     .container-lg,
@@ -953,7 +931,6 @@ ul.wp-block-rss a {
         padding-left: 15px !important;
         padding-right: 15px !important
     }
-
     .container-fluid.px-0 .row {
         margin-left: 0 !important;
         margin-right: 0 !important
@@ -1013,19 +990,15 @@ ul.wp-block-rss a {
     .gx-45 {
         --bs-gutter-x: 45px
     }
-
     .gx-60 {
         --bs-gutter-x: 60px
     }
-
     .gx-50 {
         --bs-gutter-x: 50px
     }
-
     .gx-70 {
         --bs-gutter-x: 70px
     }
-
     .gx-80 {
         --bs-gutter-x: 80px
     }
@@ -1035,11 +1008,9 @@ ul.wp-block-rss a {
     .gx-20 {
         --bs-gutter-x: 20px
     }
-
     .gx-30 {
         --bs-gutter-x: 30px
     }
-
     .gx-40 {
         --bs-gutter-x: 40px
     }
@@ -1520,12 +1491,10 @@ textarea.is-invalid {
         --icon-size: 40px;
         margin-right: 40px
     }
-
     .slick-arrow.slick-next {
         margin-right: 0;
         margin-left: 40px
     }
-
     .slick-dots {
         margin: 8px 0 38px 0
     }
@@ -1838,7 +1807,6 @@ textarea.is-invalid {
         width: 100%;
         max-width: 270px
     }
-
     .vs-mobile-menu>ul {
         padding: 0 20px
     }
@@ -1927,11 +1895,9 @@ textarea.is-invalid {
     0% {
         transform: rotate(0deg) scale(.8)
     }
-
     50% {
         transform: rotate(360deg) scale(1)
     }
-
     100% {
         transform: rotate(720deg) scale(.8)
     }
@@ -1941,13 +1907,11 @@ textarea.is-invalid {
     0% {
         box-shadow: 30px 0 0 var(--theme-color)
     }
-
     50% {
         box-shadow: 0 0 0 var(--theme-color);
         margin-bottom: 0;
         transform: translate(15px, 15px)
     }
-
     100% {
         box-shadow: 30px 0 0 var(--theme-color);
         margin-bottom: 10px
@@ -1958,13 +1922,11 @@ textarea.is-invalid {
     0% {
         box-shadow: 30px 0 0 var(--white-color)
     }
-
     50% {
         box-shadow: 0 0 0 var(--white-color);
         margin-top: -20px;
         transform: translate(15px, 15px)
     }
-
     100% {
         box-shadow: 30px 0 0 var(--white-color);
         margin-top: 0
@@ -2318,7 +2280,6 @@ textarea.is-invalid {
         right: 15px;
         bottom: 50px
     }
-
     .scroll-btn.show {
         bottom: 15px
     }
@@ -2351,11 +2312,9 @@ textarea.is-invalid {
     .play-btn {
         --icon-size: 60px
     }
-
     .scrollToTop {
         right: 20px
     }
-
     .scrollToTop.show {
         bottom: 20px
     }
@@ -2501,41 +2460,33 @@ textarea.is-invalid {
 }
 
 @media (max-width:991px) {
-
     .sec-title3.h1,
     .sec-title.h1 {
         font-size: 36px
     }
-
     .sec-line-wrap {
         margin: 0 0 60px 0
     }
-
     .sec-subtitle2 {
         margin-bottom: 15px
     }
-
     .title-area {
         margin-bottom: 40px
     }
 }
 
 @media (max-width:767px) {
-
     .sec-title3.h1,
     .sec-title.h1 {
         font-size: 30px
     }
-
     .sec-subtitle {
         font-size: 16px
     }
-
     .sec-line-wrap {
         margin: 0 0 40px 0;
         gap: 10px
     }
-
     .sec-title4 {
         font-size: 30px;
         line-height: 1.4
@@ -2677,7 +2628,6 @@ textarea.is-invalid {
 }
 
 @media (min-width:1921px) {
-
     .ls-wrapper>.ls-layer.d-hd-none,
     .ls-wrapper>a>.ls-layer.d-hd-none,
     .d-hd-none {
@@ -2696,26 +2646,22 @@ textarea.is-invalid {
         font-size: 320px;
         margin: -168px 30px -59px 0
     }
-
     .home-five-shape3 {
         right: 30px;
         bottom: 50px;
         max-width: 200px
     }
-
     .home-five-shape2 {
         left: -18%;
         bottom: 34%;
         width: 500px;
         height: 500px
     }
-
     .home-five-shape1 {
         max-width: 100%;
         right: 60px;
         width: auto
     }
-
     .sec-big-text2,
     .sec-big-text {
         font-size: 130px
@@ -2727,7 +2673,6 @@ textarea.is-invalid {
         font-size: 245px;
         margin: -128px 40px -42px 0
     }
-
     .home-five-shape1 {
         right: 0
     }
@@ -3133,11 +3078,9 @@ a.text-theme:hover,
         transform: scale(1);
         opacity: 0
     }
-
     30% {
         opacity: .4
     }
-
     100% {
         transform: scale(1.5);
         opacity: 0
@@ -3149,7 +3092,6 @@ a.text-theme:hover,
         opacity: 0;
         transform: translateY(70px)
     }
-
     100% {
         transform: translateY(0)
     }
@@ -3160,7 +3102,6 @@ a.text-theme:hover,
         opacity: 0;
         transform: translateY(-70px)
     }
-
     100% {
         transform: translateY(0)
     }
@@ -3171,7 +3112,6 @@ a.text-theme:hover,
         opacity: 0;
         transform: translateX(-70px)
     }
-
     100% {
         transform: translateX(0)
     }
@@ -3182,7 +3122,6 @@ a.text-theme:hover,
         opacity: 0;
         transform: translateX(70px)
     }
-
     100% {
         transform: translateX(0)
     }
@@ -3192,7 +3131,6 @@ a.text-theme:hover,
     0% {
         opacity: 0
     }
-
     100% {
         opacity: 1
     }
@@ -3203,7 +3141,6 @@ a.text-theme:hover,
         opacity: 0;
         transform: translateY(20px)
     }
-
     100% {
         opacity: 1;
         transform: translateY(0)
@@ -3255,7 +3192,6 @@ a.text-theme:hover,
         opacity: 0;
         transform: translate3d(0, 8%, 0)
     }
-
     100% {
         opacity: 1;
         transform: translateZ(0)
@@ -3409,7 +3345,6 @@ a.text-theme:hover,
 }
 
 @media (max-width:767px) {
-
     .widget_nav_menu a,
     .widget_meta a,
     .widget_pages a,
@@ -4053,21 +3988,17 @@ a.text-theme:hover,
         --widget-padding-y: 30px;
         --widget-padding-x: 30px
     }
-
     .widget_title {
         font-size: 20px;
         margin-bottom: 25px
     }
-
     .recent-post .post-title {
         font-size: 14px;
         line-height: 22px
     }
-
     .recent-post .recent-post-meta a {
         font-size: 12px
     }
-
     .widget-workhours li {
         padding: 14.5px 20px;
         font-size: 14px
@@ -5452,11 +5383,9 @@ h4.footer-title {
     .breadcumb-content {
         display: block
     }
-
     .breadcumb-title {
         max-width: 100%
     }
-
     .breadcumb-menu {
         margin-top: 15px
     }
@@ -5617,7 +5546,6 @@ h4.footer-title {
 }
 
 @media (max-width:767px) {
-
     .vs-pagination span,
     .vs-pagination a {
         width: 35px;
@@ -5626,16 +5554,13 @@ h4.footer-title {
         font-size: 14px;
         padding: 0 10px
     }
-
     .post-pagi-box>a {
         font-size: 12px
     }
-
     .post-pagi-box img {
         width: 40px;
         margin-right: 15px
     }
-
     .post-pagi-box.next img {
         margin-right: 0;
         margin-left: 15px
@@ -5891,7 +5816,6 @@ blockquote.vs-quote .quote-author {
 }
 
 @media (max-width:991px) {
-
     .blog-style1,
     .blog-style3 {
         margin-right: 0
@@ -5899,7 +5823,6 @@ blockquote.vs-quote .quote-author {
 }
 
 @media (max-width:767px) {
-
     .blog-style1 .blog-body,
     .blog-style3 .blog-body {
         text-align: center
@@ -5921,7 +5844,6 @@ blockquote.vs-quote .quote-author {
 }
 
 @media (max-width:767px) {
-
     .blog-style1 .blog-title,
     .blog-style3 .blog-title {
         font-size: 28px
@@ -5947,7 +5869,6 @@ blockquote.vs-quote .quote-author {
 }
 
 @media (max-width:991px) {
-
     .blog-style1 .blog-text,
     .blog-style1 p,
     .blog-style3 .blog-text,
@@ -5957,7 +5878,6 @@ blockquote.vs-quote .quote-author {
 }
 
 @media (max-width:767px) {
-
     .blog-style1 .blog-text,
     .blog-style1 p,
     .blog-style3 .blog-text,
@@ -6804,26 +6724,21 @@ blockquote.vs-quote .quote-author {
     .vs-comments-wrap .vs-post-comment {
         display: block
     }
-
     .vs-comments-wrap .star-rating {
         position: relative;
         top: 0;
         right: 0
     }
-
     .vs-comments-wrap .comment-top {
         display: block
     }
-
     .vs-comments-wrap .comment-avater {
         margin-right: 0;
         margin-bottom: 20px
     }
-
     .vs-comments-wrap .children {
         margin-left: 40px
     }
-
     .vs-comments-wrap .reply_and_edit {
         position: relative;
         top: 0;
@@ -6835,11 +6750,9 @@ blockquote.vs-quote .quote-author {
     .vs-comments-wrap .children {
         margin-left: 20px
     }
-
     .vs-comments-wrap .name {
         font-size: 18px
     }
-
     .comment-respond .form-inner {
         padding: 30px 15px
     }
@@ -6985,7 +6898,7 @@ blockquote.vs-quote .quote-author {
     line-height: .95;
     font-family: var(--special-font);
     font-weight: 400;
-    overflow: hidden
+    overflow: hidden;
 }
 
 @media (max-width:1199px) {
@@ -7002,7 +6915,7 @@ blockquote.vs-quote .quote-author {
 }
 
 .hero-main .hero-title .highlight {
-    color: var(--theme-color)
+    color: orangered;
 }
 
 .hero-main .hero-title span {
@@ -7031,7 +6944,7 @@ blockquote.vs-quote .quote-author {
 }
 
 .hero-main .hero-subtitle a {
-    color: var(--theme-color)
+    color: orangered;
 }
 
 .hero-main .hbtn1 {
@@ -7081,7 +6994,7 @@ blockquote.vs-quote .quote-author {
 }
 
 .hero-main.style3 .hero-title span {
-    display: inline-block
+    display: inline-block;
 }
 
 .hero-main.style3 .hero-subtitle {
@@ -7212,7 +7125,6 @@ blockquote.vs-quote .quote-author {
 }
 
 @media (max-width:991px) {
-
     .hero-layout1 .ele1,
     .hero-layout1 .ele2 {
         display: none
@@ -7228,7 +7140,6 @@ blockquote.vs-quote .quote-author {
     0% {
         transform: translateY(-50%) rotate(0deg)
     }
-
     100% {
         transform: translateY(-50%) rotate(360deg)
     }
@@ -12282,16 +12193,13 @@ blockquote.vs-quote .quote-author {
         padding: 23px 8px;
         font-size: 14px
     }
-
     .cart_table .cart-productname {
         font-size: 14px
     }
-
     .cart_table .vs-cart-coupon {
         width: 100%;
         margin-bottom: 20px
     }
-
     .cart_table .cart-actions {
         text-align: center
     }
@@ -12305,11 +12213,9 @@ blockquote.vs-quote .quote-author {
         border-spacing: 0 20px;
         border: none
     }
-
     .cart_table thead {
         display: none
     }
-
     .cart_table td {
         padding: 15px;
         display: block;
@@ -12319,20 +12225,16 @@ blockquote.vs-quote .quote-author {
         border: 1px solid #f3f3f3;
         border-bottom: none
     }
-
     .cart_table td::before {
         display: block
     }
-
     .cart_table td:last-child {
         border-bottom: 1px solid #f3f3f3
     }
-
     .cart_table td.cart-actions {
         padding-left: 15px;
         text-align: center
     }
-
     .cart_table td.cart-actions>.vs-btn {
         margin-top: 10px;
         margin-right: 0;
@@ -12342,11 +12244,9 @@ blockquote.vs-quote .quote-author {
         margin-left: auto;
         margin-right: auto
     }
-
     .cart_table td.cart-actions>.vs-btn:last-child {
         margin-right: auto
     }
-
     .cart_table .vs-cart-coupon {
         width: 100%;
         text-align: center;
@@ -12355,17 +12255,14 @@ blockquote.vs-quote .quote-author {
         display: block;
         padding-bottom: 10px
     }
-
     .cart_table .vs-cart-coupon input {
         width: 100%;
         margin-bottom: 10px
     }
-
     .cart_totals th,
     .cart_totals td {
         padding: 15px 10px
     }
-
     .cart_totals th:first-child,
     .cart_totals td:first-child {
         width: 17%;
@@ -12622,11 +12519,9 @@ span.select2-selection.select2-selection--single:focus {
     tfoot.checkout-ordertable th {
         display: none
     }
-
     .woocommerce-checkout-payment ul input[type=radio]~label img {
         max-width: 150px
     }
-
     .woocommerce-form-coupon,
     .woocommerce-form-login {
         padding: 30px 20px;
@@ -13384,27 +13279,22 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 @media (max-width:991px) {
-
     .space,
     .space-top {
         padding-top: var(--section-space-mobile)
     }
-
     .space,
     .space-bottom {
         padding-bottom: var(--section-space-mobile)
     }
-
     .space-extra,
     .space-extra-top {
         padding-top: calc(var(--section-space-mobile) - 30px)
     }
-
     .space-extra,
     .space-extra-bottom {
         padding-bottom: calc(var(--section-space-mobile) - 30px)
     }
-
     .space-top-md-none {
         padding-top: 0
     }
