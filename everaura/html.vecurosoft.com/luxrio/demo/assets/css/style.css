@@ -8130,7 +8130,8 @@ blockquote.vs-quote .quote-author {
     line-height: 34px;
     letter-spacing: .5px;
     text-transform: capitalize;
-    margin: 0 0 30px 0
+    margin: 0 0 30px 0;
+    padding-left: 40px;
 }
 
 .testi-style .testi-user {
