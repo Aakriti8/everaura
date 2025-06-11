@@ -1780,7 +1780,8 @@ textarea.is-invalid {
     display: inline-block;
     background-color: #fff0;
     color: var(--white-color);
-    border-radius: 5px
+    border-radius: 5px;
+    display: none !important;
 }
 
 .vs-menu-toggle:hover {
@@ -4937,7 +4938,7 @@ a.text-theme:hover,
 }
 
 .menu-toggle {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-between;
     width: 100%;
@@ -5052,7 +5053,8 @@ a.text-theme:hover,
     color: var(--pagi-text-color);
     font-weight: 600;
     line-height: 30px;
-    text-transform: capitalize
+    text-transform: capitalize;
+    display: none;
 }
 
 .footer-info.style2 p span {
