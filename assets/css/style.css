@@ -1781,7 +1781,7 @@ textarea.is-invalid {
     background-color: #fff0;
     color: var(--white-color);
     border-radius: 5px;
-    display: none !important;
+    /* display: none !important; */
 }
 
 .vs-menu-toggle:hover {
