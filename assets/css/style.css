@@ -13295,3 +13295,122 @@ span.select2-selection.select2-selection--single:focus {
         padding-top: 0
     }
 }
+
+
+/* === Cart Modal – core layout & animation ============================ */
+
+#cartModal {
+    display: none;
+    /* stays hidden until JS toggles it   */
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 400px;
+    background: black;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.20);
+    z-index: 9999;
+    opacity: 0;
+    animation: fade-in 0.35s ease-out forwards;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -20px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+
+/* === Heading ========================================================= */
+
+#cartModal h3 {
+    margin: 0 0 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+}
+
+
+/* === Cart list ======================================================= */
+
+#modalCartItems {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 1rem;
+    max-height: 260px;
+    /* scroll if the list gets long */
+    overflow-y: auto;
+    color: #fff;
+}
+
+#modalCartItems li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95rem;
+}
+
+#modalCartItems li:last-child {
+    border-bottom: none;
+}
+
+
+/* === Buttons ========================================================= */
+
+#cartModal button {
+    cursor: pointer;
+    padding: 0.55rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    transition: background 0.25s ease, opacity 0.25s ease;
+}
+
+
+/* Primary: “Place Order” (WhatsApp theme) */
+
+#cartModal button:first-of-type {
+    background: #25D366;
+    /* WhatsApp green */
+    color: #fff;
+}
+
+#cartModal button:first-of-type:hover {
+    background: #1ebe59;
+}
+
+
+/* Secondary: “Close” */
+
+#cartModal button:last-of-type {
+    background: #999;
+    color: #fff;
+    margin-left: 10px;
+}
+
+#cartModal button:last-of-type:hover {
+    background: #858585;
+    opacity: 0.9;
+}
+
+
+/* === Optional translucent backdrop (nice UX) ======================== */
+
+.cart-backdrop {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(2px);
+    z-index: 9998;
+    animation: fade-in 0.35s ease-out forwards;
+}
