@@ -193,7 +193,7 @@ function sendToWhatsApp() {
     });
     message += `%0A*Total: ₹${total.toFixed(2)}*`;
 
-    const phone = "919425545594"; 
+    const phone = "919575692256"; 
     const whatsappURL = `https://wa.me/${phone}?text=${message}`;
     window.open(whatsappURL, "_blank");
 }
