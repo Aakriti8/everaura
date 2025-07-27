@@ -38,7 +38,7 @@ function loadTrendingProducts() {
                     <a href="#">${product.name}</a>
                 </h3>
                 <span class="product-price">
-                    <span class="product-price__number">$${product.price.toFixed(2)}</span>
+                    <span class="product-price__number">₹${product.price.toFixed(2)}</span>
                     <a href="#" class="product-cart" onclick="event.preventDefault(); addToCart(${product.id})">add to cart</a>
                 </span>
             </div>
@@ -83,7 +83,7 @@ function loadBestSellingProducts() {
                         <a href="#">${product.name}</a>
                     </h3>
                     <span class="product-price">
-                        <span class="product-price__number">$${product.price.toFixed(2)}</span>
+                        <span class="product-price__number">₹${product.price.toFixed(2)}</span>
                         <a class="product-cart" href="#" onclick="event.preventDefault(); addToCart(${product.id})">add to cart</a>
                     </span>
                 </div>
@@ -163,12 +163,12 @@ function openCartModal() {
         const ul = document.createElement('ul');
         cart.forEach(item => {
             const li = document.createElement("li");
-            li.textContent = `${item.name} (x${item.quantity}) - $${(item.price * item.quantity).toFixed(2)}`;
+            li.textContent = `${item.name} (x${item.quantity}) - ₹${(item.price * item.quantity).toFixed(2)}`;
             ul.appendChild(li);
             total += item.price * item.quantity;
         });
         modalCartItems.appendChild(ul);
-        modalCartTotal.innerHTML = `<strong>Total: $${total.toFixed(2)}</strong>`;
+        modalCartTotal.innerHTML = `<strong>Total: ₹${total.toFixed(2)}</strong>`;
     }
 
     modal.style.display = "flex";
@@ -188,10 +188,10 @@ function sendToWhatsApp() {
     let message = "Hello! I'd like to place the following order:%0A%0A";
     let total = 0;
     cart.forEach((item, index) => {
-        message += `${index + 1}. ${item.name} (x${item.quantity}) - $${(item.price * item.quantity).toFixed(2)}%0A`;
+        message += `${index + 1}. ${item.name} (x${item.quantity}) - ₹${(item.price * item.quantity).toFixed(2)}%0A`;
         total += item.price * item.quantity;
     });
-    message += `%0A*Total: $${total.toFixed(2)}*`;
+    message += `%0A*Total: ₹${total.toFixed(2)}*`;
 
     const phone = "919425545594"; 
     const whatsappURL = `https://wa.me/${phone}?text=${message}`;
