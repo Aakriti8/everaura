@@ -2532,7 +2532,8 @@ textarea.is-invalid {
     background-color: var(--theme-color);
     color: var(--white-color);
     padding: .35em .55em;
-    border-radius: 50%
+    border-radius: 50%;
+    margin: 25px;
 }
 
 .hr-style1 {
@@ -4104,7 +4105,7 @@ a.text-theme:hover,
     display: flex;
     align-items: center;
     gap: 9px;
-    font-size: 12px;
+    font-size: 20px;
     font-weight: 800;
     text-transform: uppercase;
     color: var(--white-color);
