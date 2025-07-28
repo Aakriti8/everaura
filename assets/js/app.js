@@ -99,6 +99,7 @@ function loadBestSellingProducts() {
 }
 
 
+// assets/js/app.js
 // --- Shopping Cart Functions (Cookie-Based) ---
 
 function getCart() {
@@ -128,22 +129,37 @@ function addToCart(productId) {
     if (cartItem) {
         cartItem.quantity++;
     } else {
-        cart.push({ ...product, quantity: 1 });
+        cart.push({ id: product.id, name: product.name, price: product.price, quantity: 1 });
     }
     saveCart(cart);
     updateCartCount();
     alert(`${product.name} has been added to your cart!`);
 }
 
+function removeFromCart(productId) {
+    const cart = getCart();
+    const index = cart.findIndex(item => item.id === productId);
+    if (index !== -1) {
+        if (cart[index].quantity > 1) {
+            cart[index].quantity--;
+        } else {
+            cart.splice(index, 1);
+        }
+        saveCart(cart);
+        updateCartCount();
+        openCartModal(); // Refresh the modal to reflect updated cart
+        alert(`Item removed from cart!`);
+    }
+}
+
 function updateCartCount() {
     const cart = getCart();
     const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
     const cartCountElement = document.getElementById('cart-count');
-    if(cartCountElement) {
+    if (cartCountElement) {
         cartCountElement.innerText = totalItems;
     }
 }
-
 
 // --- Cart Modal Functions ---
 
@@ -161,9 +177,19 @@ function openCartModal() {
     } else {
         let total = 0;
         const ul = document.createElement('ul');
-        cart.forEach(item => {
+        ul.style.listStyle = 'none';
+        ul.style.padding = '0';
+        cart.forEach((item, index) => {
             const li = document.createElement("li");
-            li.textContent = `${item.name} (x${item.quantity}) - ₹${(item.price * item.quantity).toFixed(2)}`;
+            li.style.display = 'flex';
+            li.style.justifyContent = 'space-between';
+            li.style.alignItems = 'center';
+            li.style.padding = '10px 0';
+            li.style.borderBottom = '1px solid rgba(255, 255, 255, 0.1)';
+            li.innerHTML = `
+                <span>${index + 1}. ${item.name} (x${item.quantity}) - ₹${(item.price * item.quantity).toFixed(2)}</span>
+                <button onclick="removeFromCart(${item.id})" style="background: red; color: white; border: none; border-radius: 5px; padding: 5px 10px; cursor: pointer; font-size: 12px;">Remove</button>
+            `;
             ul.appendChild(li);
             total += item.price * item.quantity;
         });
@@ -193,7 +219,7 @@ function sendToWhatsApp() {
     });
     message += `%0A*Total: ₹${total.toFixed(2)}*`;
 
-    const phone = "919575692256"; 
+    const phone = "919575692256";
     const whatsappURL = `https://wa.me/${phone}?text=${message}`;
     window.open(whatsappURL, "_blank");
 }

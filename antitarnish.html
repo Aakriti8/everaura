@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Everaura - The Jewelry Website </title>
+    <title>Everaura - The Jewelery Website</title>
     <meta name="author" content="vecuro">
     <meta name="description" content="Luxrio - The Fashion & Watch E-Commerce HTML5 Template">
     <meta name="keywords" content="Luxrio - The Fashion & Watch E-Commerce HTML5 Template">
@@ -51,7 +51,17 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="vs-body2">
+    <!--[if lte IE 9]>
+    	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+    <!--********************************
+   		Code Start From Here 
+	******************************** -->
+    <!--==============================
+		Preloader
+	==============================-->
+   
+ <body class="vs-body2">
     <div class="preloader">
         <button class="vs-btn preloaderCls">Cancel Preloader </button>
         <div class="preloader-inner">
@@ -163,49 +173,84 @@
             </div>
         </header>
         <!--==============================
-        Header Area end
-    ==============================-->
-        <!--==============================
-        Header Area end
-    ==============================-->
-        <!--==============================
           Breadcumb
       ============================== -->
-        <div class="breadcumb-wrapper" data-bg-src="assets/img/bg/breadcumb-bg-4.jpg">
+        <div class="breadcumb-wrapper" data-bg-src="assets/img/bg/breadcumb-bg-3.jpg">
             <img src="assets/img/shapes/dot-shape.svg" alt="dot" class="breadcumb-element">
             <div class="container z-index-common">
                 <div class="breadcumb-content">
-                    <h1 class="breadcumb-title">error page</h1>
+                    <h1 class="breadcumb-title">our product</h1>
                     <div class="breadcumb-menu-wrap">
                         <ul class="breadcumb-menu">
                             <li><a href="index.html">Home</a></li>
-                            <li>404 page</li>
+                            <li>masonry grid</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Error Area -->
-        <section class="z-index-common space-bottom">
+        <!-- Products Area -->
+        <div class="shop-page1 space-top z-index-common">
             <div class="extra-shape"></div>
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <div class="error-content">
-                            <h2>404</h2>
-                            <h3>Oops! That page can't be found.</h3>
-                            <p>Seems like this page took a fashion detour. Let’s fix your style route — Click below to return to the main collection.
-                            </p>
-                            <a href="shop.html" class="vs-btn" tabindex="0">
-                go back to homepage
-                <i class="fa-light fa-arrow-right-long"></i>
-              </a>
+                <div class="vs-sort-bar style2">
+                    <div class="row gx-4 gy-0 align-items-center">
+                        <div class="col-md-auto flex-grow-1">
+                           <p class="showing-result">|| Showing 1 - <span id="product-count">10</span> of <span id="total-products">10</span> results</p>
+                        </div>
+                        <div class="filter-menu filter-menu-active">
+    <select id="sort-options" onchange="sortAndDisplayProducts()">
+        <option value="default">default shorting</option>
+        <option value="popularity">Sort by popularity</option>
+        <option value="rating">Sort by average rating</option>
+        <option value="latest">Sort by latest</option>
+        <option value="price-low">Sort by price: low to high</option>
+        <option value="price-high">Sort by price: high to low</option>
+    </select>
+</div>
+                        <div class="col-md-auto">
+                            <form class="vs-grid-view">
+                                <button class="grid-view active" data-col="3" onclick="event.preventDefault(); loadShopProducts()">
+                                    <i class="fal fa-th-large"></i>
+                                </button>
+                                <button class="grid-view" data-col="2" onclick="event.preventDefault(); loadShopProducts()">
+                                    <i class="fal fa-th"></i>
+                                </button>
+                                <button class="grid-view" data-col="1" onclick="event.preventDefault(); loadShopProducts()">
+                                    <i class="fal fa-list"></i>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="col-md-auto">
+                            <form class="vs-select-style">
+                                <select id="view-options" onchange="loadShopProducts()">
+                                    <option value="grid">Grid View</option>
+                                    <option value="list">List View</option>
+                </select>
+                            </form>
+                        </div>
+                        <div class="col-md-auto">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li><span class="nav-tabs-title">view</span></li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
+                    2
+                  </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">
+                    3
+                  </button>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!-- Error Area End -->
+ <div class="row masonry-grid" id="shop-product-list" style="min-height: 200px; border: 1px solid rgb(9, 9, 9);"></div>
+
+
+        
+        <!-- Products Area End -->
         <!--==============================
         Footer Area
     ==============================-->
@@ -217,7 +262,9 @@
                             <div class="footer-logo">
                                 <a href="index.html"><img src="assets/img/logo.png" alt="logo"></a>
                             </div>
-
+                            <div class="footer-info style2">
+                                <p><span>Address :</span> 966 munich Expressway Sue 700 Germany, TX 7859</p>
+                            </div>
                             <a href="cart.html"><img src="assets/img/footer/payments.png" alt="payments"></a>
                         </div>
                         <div class="col-lg-auto">
@@ -273,6 +320,64 @@
         Footer Area End
     ==============================-->
     </main>
+    <!-- Cart Modal -->
+<div id="cart-modal" style="display: none;">
+    <div class="modal-content">
+        <button class="close-btn" onclick="closeCartModal()" style="width: 30px; right: 10px; position: absolute; top: 10px; font-size: xxx-large; font-weight: 600; color: red; background: none; border: none;">&times;</button>
+        <h3 style="color: #ff960f;">Your Shopping Bag</h3>
+        <div id="modal-cart-items" style="margin-bottom: 20px;"></div>
+        <div id="modal-cart-total" style="font-weight: bold; margin-bottom: 20px;"></div>
+        <button class="whatsapp-btn" onclick="sendToWhatsApp()" style="margin-top: 30px; border-radius: 20px; background: green; color: white; font-weight: 800;">Place Order on WhatsApp</button>
+    </div>
+</div>
+<style>
+    #cart-modal {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        color: white;
+        display: flex;
+        transform: translate(-50%, -50%);
+        text-align: left;
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        background-color: rgba(17, 25, 40, 0.75);
+        border-radius: 12px;
+        align-items: center;
+        border: 1px solid rgba(255, 255, 255, 0.125);
+        justify-content: center;
+    }
+    #cart-modal .modal-content {
+        width: 90%;
+        max-width: 500px;
+        padding: 20px;
+        background-color: #1f2937;
+        border: 2px solid white;
+        border-radius: 28px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    #modal-cart-items div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    #modal-cart-items button {
+        background: red;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+        font-size: 12px;
+    }
+    #modal-cart-items button:hover {
+        background: darkred;
+    }
+</style>
     <!-- ==============================
     	Main Section Wrapper End
   	============================== -->
@@ -309,6 +414,139 @@
     <script src="assets/js/bundled-lenis.min.js"></script>
     <!-- Main Js File -->
     <script src="assets/js/main.js"></script>
+    <!-- Custom Scripts -->
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        loadAntitarnishProducts();
+        updateCartCount();
+        setupViewToggle();
+    });
+
+    function loadAntitarnishProducts() {
+        const container = document.getElementById('shop-product-list');
+        if (!container) {
+            console.error('Shop product container not found!');
+            return;
+        }
+
+        container.innerHTML = '';
+        let antitarnishProducts = products.filter(p => p.category === 'Antitarnish');
+
+        antitarnishProducts.forEach(product => {
+            const productDiv = document.createElement('div');
+            productDiv.className = 'col-lg-4 col-md-6 masonry-item wow animate__fadeInUp';
+            productDiv.setAttribute('data-wow-delay', '0.2s');
+            productDiv.innerHTML = `
+                <div class="product-style2 version2">
+                    ${product.isTrending === 'y' ? '<span class="product-badge">new</span>' : ''}
+                    <div class="product-action">
+                        <button class="product-action__btn"><i class="fal fa-heart"></i></button>
+                        <button class="product-action__btn"><i class="fal fa-eye"></i></button>
+                    </div>
+                    <div class="product-img">
+                        <img class="img" src="${product.image}" alt="${product.name}">
+                    </div>
+                    <h3 class="product-title">
+                        <a href="#">${product.name}</a>
+                    </h3>
+                    <span class="product-price">
+                        <span class="product-price__number">₹${product.price.toFixed(2)}</span>
+                        <a href="#" class="product-cart" onclick="event.preventDefault(); addToCart(${product.id})">add to cart</a>
+                    </span>
+                </div>
+            `;
+            container.appendChild(productDiv);
+        });
+
+        updateProductCount(antitarnishProducts.length);
+    }
+
+    function sortAndDisplayProducts() {
+        const sortValue = document.getElementById('sort-options').value;
+        let antitarnishProducts = products.filter(p => p.category === 'Antitarnish');
+
+        switch (sortValue) {
+            case 'popularity':
+                antitarnishProducts.sort((a, b) => (b.popularity || 0) - (a.popularity || 0));
+                break;
+            case 'rating':
+                antitarnishProducts.sort((a, b) => (b.rating || 0) - (a.rating || 0));
+                break;
+            case 'latest':
+                antitarnishProducts.sort((a, b) => (b.id || 0) - (a.id || 0));
+                break;
+            case 'price-low':
+                antitarnishProducts.sort((a, b) => a.price - b.price);
+                break;
+            case 'price-high':
+                antitarnishProducts.sort((a, b) => b.price - a.price);
+                break;
+            default:
+                break;
+        }
+
+        const container = document.getElementById('shop-product-list');
+        container.innerHTML = '';
+
+        antitarnishProducts.forEach(product => {
+            const productDiv = document.createElement('div');
+            productDiv.className = 'col-lg-4 col-md-6 masonry-item wow animate__fadeInUp';
+            productDiv.setAttribute('data-wow-delay', '0.2s');
+            productDiv.innerHTML = `
+                <div class="product-style2 version2">
+                    ${product.isTrending === 'y' ? '<span class="product-badge">new</span>' : ''}
+                    <div class="product-action">
+                        <button class="product-action__btn"><i class="fal fa-heart"></i></button>
+                        <button class="product-action__btn"><i class="fal fa-eye"></i></button>
+                    </div>
+                    <div class="product-img">
+                        <img class="img" src="${product.image}" alt="${product.name}">
+                    </div>
+                    <h3 class="product-title">
+                        <a href="#">${product.name}</a>
+                    </h3>
+                    <span class="product-price">
+                        <span class="product-price__number">₹${product.price.toFixed(2)}</span>
+                        <a href="#" class="product-cart" onclick="event.preventDefault(); addToCart(${product.id})">add to cart</a>
+                    </span>
+                </div>
+            `;
+            container.appendChild(productDiv);
+        });
+
+        updateProductCount(antitarnishProducts.length);
+    }
+
+    function updateProductCount(count) {
+        const productCountElement = document.getElementById('product-count');
+        const totalProductsElement = document.getElementById('total-products');
+        if (productCountElement && totalProductsElement) {
+            productCountElement.innerText = count;
+            totalProductsElement.innerText = products.filter(p => p.category === 'Antitarnish').length;
+        }
+    }
+
+    function setupViewToggle() {
+        const viewButtons = document.querySelectorAll('.grid-view');
+        viewButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                viewButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                const col = button.getAttribute('data-col');
+                const container = document.getElementById('shop-product-list');
+                container.className = `row masonry-grid col-${col}`;
+                loadAntitarnishProducts();
+            });
+        });
+    }
+</script>
+    </div>
+    <!--==============================
+        All Js File End
+    ==============================-->
 </body>
 
 </html>

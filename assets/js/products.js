@@ -1,5 +1,3 @@
-// assets/js/products.js
-
 const products = [
     {
         id: 1,
@@ -8,7 +6,8 @@ const products = [
         price: 155.00,
         isTrending: 'y',
         isBestSelling: 'y',
-        type: 'CLASSIC'
+        type: 'CLASSIC',
+        category: 'Watch'
     },
     {
         id: 2,
@@ -17,7 +16,8 @@ const products = [
         price: 155.00,
         isTrending: 'y',
         isBestSelling: 'y',
-        type: 'Modern'
+        type: 'Modern',
+        category: 'Watch'
     },
     {
         id: 3,
@@ -26,7 +26,8 @@ const products = [
         price: 145.00,
         isTrending: 'y',
         isBestSelling: 'y',
-        type: 'CLASSIC'
+        type: 'CLASSIC',
+        category: 'Watch'
     },
     {
         id: 4,
@@ -35,7 +36,8 @@ const products = [
         price: 135.00,
         isTrending: 'y',
         isBestSelling: 'y',
-        type: 'Modern'
+        type: 'Modern',
+        category: 'Watch'
     },
     {
         id: 5,
@@ -44,7 +46,8 @@ const products = [
         price: 125.00,
         isTrending: 'y',
         isBestSelling: 'y',
-        type: 'CLASSIC'
+        type: 'CLASSIC',
+        category: 'Watch'
     },
     {
         id: 6,
@@ -53,7 +56,8 @@ const products = [
         price: 185.00,
         isTrending: 'y',
         isBestSelling: 'y',
-        type: 'CLASSIC'
+        type: 'CLASSIC',
+        category: 'Watch'
     },
     {
         id: 7,
@@ -62,7 +66,8 @@ const products = [
         price: 165.00,
         isTrending: 'y',
         isBestSelling: 'y',
-        type: 'Modern'
+        type: 'Modern',
+        category: 'Watch'
     },
     {
         id: 8,
@@ -71,7 +76,8 @@ const products = [
         price: 195.00,
         isTrending: 'y',
         isBestSelling: 'y',
-        type: 'Modern'
+        type: 'Modern',
+        category: 'Watch'
     },
     {
         id: 9,
@@ -80,7 +86,8 @@ const products = [
         price: 175.00,
         isTrending: 'y',
         isBestSelling: 'y',
-        type: 'CLASSIC'
+        type: 'CLASSIC',
+        category: 'Watch'
     },
     {
         id: 10,
@@ -89,6 +96,127 @@ const products = [
         price: 160.00,
         isTrending: 'y',
         isBestSelling: 'y',
-        type: 'Modern'
+        type: 'Modern',
+        category: 'Watch'
+    },
+    {
+        id: 11,
+        name: "Petal Perfection",
+        image: "assets/img/products5/bracelet-1.png",
+        price: 155.00,
+        isTrending: 'y',
+        isBestSelling: 'y',
+        type: 'Modern',
+        category: 'Bracelet'
+    },
+    {
+        id: 12,
+        name: "Golden Line",
+        image: "assets/img/products5/bracelet-2.png",
+        price: 155.00,
+        isTrending: 'y',
+        isBestSelling: 'y',
+        type: 'CLASSIC',
+        category: 'Antitarnish'
+    },
+    {
+        id: 13,
+        name: "Cropped Golden Pendant",
+        image: "assets/img/products5/bracelet-3.png",
+        price: 155.00,
+        isTrending: 'n',
+        isBestSelling: 'y',
+        type: 'Modern',
+        category: 'ABracelet'
+    },
+    {
+        id: 14,
+        name: "Petal Perfection",
+        image: "assets/img/products5/earring-1.png",
+        price: 155.00,
+        isTrending: 'y',
+        isBestSelling: 'y',
+        type: 'Modern',
+        category: 'Earring'
+    },
+    {
+        id: 15,
+        name: "Golden Line",
+        image: "assets/img/products5/earring-2.png",
+        price: 155.00,
+        isTrending: 'y',
+        isBestSelling: 'y',
+        type: 'CLASSIC',
+        category: 'Earring'
+    },
+    {
+        id: 16,
+        name: "Cropped Golden Pendant",
+        image: "assets/img/products5/earring-3.png",
+        price: 155.00,
+        isTrending: 'n',
+        isBestSelling: 'y',
+        type: 'Modern',
+        category: 'Earring'
+    },
+    {
+        id: 17,
+        name: "Petal Perfection",
+        image: "assets/img/products5/necklace-1.png",
+        price: 155.00,
+        isTrending: 'y',
+        isBestSelling: 'y',
+        type: 'Modern',
+        category: 'Necklace'
+    },
+    {
+        id: 18,
+        name: "Golden Line",
+        image: "assets/img/products5/necklace-2.png",
+        price: 155.00,
+        isTrending: 'y',
+        isBestSelling: 'y',
+        type: 'CLASSIC',
+        category: 'Necklace'
+    },
+    {
+        id: 19,
+        name: "Cropped Golden Pendant",
+        image: "assets/img/products5/necklace-3.png",
+        price: 155.00,
+        isTrending: 'n',
+        isBestSelling: 'y',
+        type: 'Modern',
+        category: 'Necklace'
+    },
+    {
+        id: 20,
+        name: "Petal Perfection",
+        image: "assets/img/products5/ring-1.png",
+        price: 155.00,
+        isTrending: 'y',
+        isBestSelling: 'y',
+        type: 'Modern',
+        category: 'Ring'
+    },
+    {
+        id: 21,
+        name: "Golden Line",
+        image: "assets/img/products5/ring-2.png",
+        price: 155.00,
+        isTrending: 'y',
+        isBestSelling: 'y',
+        type: 'CLASSIC',
+        category: 'Ring'
+    },
+    {
+        id: 22,
+        name: "Cropped Golden Pendant",
+        image: "assets/img/products5/ring-3.png",
+        price: 155.00,
+        isTrending: 'n',
+        isBestSelling: 'y',
+        type: 'Modern',
+        category: 'Ring'
     }
 ];
