@@ -410,130 +410,130 @@
     <script src="assets/js/app.js"></script>
     <script>
     document.addEventListener('DOMContentLoaded', () => {
-        loadAntitarnishProducts();
-        updateCartCount();
-        setupViewToggle();
+    loadAntiTarnishProducts();
+    updateCartCount();
+    setupViewToggle();
+});
+
+function loadAntiTarnishProducts() {
+    const container = document.getElementById('shop-product-list');
+    if (!container) {
+        console.error('Anti-tarnish product container not found!');
+        return;
+    }
+
+    container.innerHTML = '';
+    let antiTarnishProducts = products.filter(p => p.isAntiTarnish === 'y');
+
+    antiTarnishProducts.forEach(product => {
+        const productDiv = document.createElement('div');
+        productDiv.className = 'col-lg-4 col-md-6 masonry-item wow animate__fadeInUp';
+        productDiv.setAttribute('data-wow-delay', '0.2s');
+        productDiv.innerHTML = `
+            <div class="product-style2 version2">
+                ${product.isAntiTarnish === 'y' ? '<span class="product-badge">anti-tarnish</span>' : ''}
+                <div class="product-action">
+                    <button class="product-action__btn"><i class="fal fa-heart"></i></button>
+                    <button class="product-action__btn"><i class="fal fa-eye"></i></button>
+                </div>
+                <div class="product-img">
+                    <img class="img" src="${product.image}" alt="${product.name}">
+                </div>
+                <h3 class="product-title">
+                    <a href="#">${product.name}</a>
+                </h3>
+                <span class="product-price">
+                    <span class="product-price__number">₹${product.price.toFixed(2)}</span>
+                    <a href="#" class="product-cart" onclick="event.preventDefault(); addToCart(${product.id})">add to cart</a>
+                </span>
+            </div>
+        `;
+        container.appendChild(productDiv);
     });
 
-    function loadAntitarnishProducts() {
-        const container = document.getElementById('shop-product-list');
-        if (!container) {
-            console.error('Shop product container not found!');
-            return;
-        }
+    updateProductCount(antiTarnishProducts.length);
+}
 
-        container.innerHTML = '';
-        let antitarnishProducts = products.filter(p => p.category === 'Antitarnish');
+function sortAndDisplayProducts() {
+    const sortValue = document.getElementById('sort-options').value;
+    let antiTarnishProducts = products.filter(p => p.isAntiTarnish === 'y');
 
-        antitarnishProducts.forEach(product => {
-            const productDiv = document.createElement('div');
-            productDiv.className = 'col-lg-4 col-md-6 masonry-item wow animate__fadeInUp';
-            productDiv.setAttribute('data-wow-delay', '0.2s');
-            productDiv.innerHTML = `
-                <div class="product-style2 version2">
-                    ${product.isTrending === 'y' ? '<span class="product-badge">new</span>' : ''}
-                    <div class="product-action">
-                        <button class="product-action__btn"><i class="fal fa-heart"></i></button>
-                        <button class="product-action__btn"><i class="fal fa-eye"></i></button>
-                    </div>
-                    <div class="product-img">
-                        <img class="img" src="${product.image}" alt="${product.name}">
-                    </div>
-                    <h3 class="product-title">
-                        <a href="#">${product.name}</a>
-                    </h3>
-                    <span class="product-price">
-                        <span class="product-price__number">₹${product.price.toFixed(2)}</span>
-                        <a href="#" class="product-cart" onclick="event.preventDefault(); addToCart(${product.id})">add to cart</a>
-                    </span>
+    switch (sortValue) {
+        case 'popularity':
+            antiTarnishProducts.sort((a, b) => (b.popularity || 0) - (a.popularity || 0));
+            break;
+        case 'rating':
+            antiTarnishProducts.sort((a, b) => (b.rating || 0) - (a.rating || 0));
+            break;
+        case 'latest':
+            antiTarnishProducts.sort((a, b) => (b.id || 0) - (a.id || 0));
+            break;
+        case 'price-low':
+            antiTarnishProducts.sort((a, b) => a.price - b.price);
+            break;
+        case 'price-high':
+            antiTarnishProducts.sort((a, b) => b.price - a.price);
+            break;
+        default:
+            break;
+    }
+
+    const container = document.getElementById('shop-product-list');
+    container.innerHTML = '';
+
+    antiTarnishProducts.forEach(product => {
+        const productDiv = document.createElement('div');
+        productDiv.className = 'col-lg-4 col-md-6 masonry-item wow animate__fadeInUp';
+        productDiv.setAttribute('data-wow-delay', '0.2s');
+        productDiv.innerHTML = `
+            <div class="product-style2 version2">
+                ${product.isAntiTarnish === 'y' ? '<span class="product-badge">anti-tarnish</span>' : ''}
+                <div class="product-action">
+                    <button class="product-action__btn"><i class="fal fa-heart"></i></button>
+                    <button class="product-action__btn"><i class="fal fa-eye"></i></button>
                 </div>
-            `;
-            container.appendChild(productDiv);
-        });
-
-        updateProductCount(antitarnishProducts.length);
-    }
-
-    function sortAndDisplayProducts() {
-        const sortValue = document.getElementById('sort-options').value;
-        let antitarnishProducts = products.filter(p => p.category === 'Antitarnish');
-
-        switch (sortValue) {
-            case 'popularity':
-                antitarnishProducts.sort((a, b) => (b.popularity || 0) - (a.popularity || 0));
-                break;
-            case 'rating':
-                antitarnishProducts.sort((a, b) => (b.rating || 0) - (a.rating || 0));
-                break;
-            case 'latest':
-                antitarnishProducts.sort((a, b) => (b.id || 0) - (a.id || 0));
-                break;
-            case 'price-low':
-                antitarnishProducts.sort((a, b) => a.price - b.price);
-                break;
-            case 'price-high':
-                antitarnishProducts.sort((a, b) => b.price - a.price);
-                break;
-            default:
-                break;
-        }
-
-        const container = document.getElementById('shop-product-list');
-        container.innerHTML = '';
-
-        antitarnishProducts.forEach(product => {
-            const productDiv = document.createElement('div');
-            productDiv.className = 'col-lg-4 col-md-6 masonry-item wow animate__fadeInUp';
-            productDiv.setAttribute('data-wow-delay', '0.2s');
-            productDiv.innerHTML = `
-                <div class="product-style2 version2">
-                    ${product.isTrending === 'y' ? '<span class="product-badge">new</span>' : ''}
-                    <div class="product-action">
-                        <button class="product-action__btn"><i class="fal fa-heart"></i></button>
-                        <button class="product-action__btn"><i class="fal fa-eye"></i></button>
-                    </div>
-                    <div class="product-img">
-                        <img class="img" src="${product.image}" alt="${product.name}">
-                    </div>
-                    <h3 class="product-title">
-                        <a href="#">${product.name}</a>
-                    </h3>
-                    <span class="product-price">
-                        <span class="product-price__number">₹${product.price.toFixed(2)}</span>
-                        <a href="#" class="product-cart" onclick="event.preventDefault(); addToCart(${product.id})">add to cart</a>
-                    </span>
+                <div class="product-img">
+                    <img class="img" src="${product.image}" alt="${product.name}">
                 </div>
-            `;
-            container.appendChild(productDiv);
+                <h3 class="product-title">
+                    <a href="#">${product.name}</a>
+                </h3>
+                <span class="product-price">
+                    <span class="product-price__number">₹${product.price.toFixed(2)}</span>
+                    <a href="#" class="product-cart" onclick="event.preventDefault(); addToCart(${product.id})">add to cart</a>
+                </span>
+            </div>
+        `;
+        container.appendChild(productDiv);
+    });
+
+    updateProductCount(antiTarnishProducts.length);
+}
+
+function updateProductCount(count) {
+    const productCountElement = document.getElementById('product-count');
+    const totalProductsElement = document.getElementById('total-products');
+    if (productCountElement && totalProductsElement) {
+        productCountElement.innerText = count;
+        totalProductsElement.innerText = products.filter(p => p.isAntiTarnish === 'y').length;
+    }
+}
+
+function setupViewToggle() {
+    const viewButtons = document.querySelectorAll('.grid-view');
+    viewButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            viewButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            const col = button.getAttribute('data-col');
+            const container = document.getElementById('shop-product-list');
+            container.className = `row masonry-grid col-${col}`;
+            loadAntiTarnishProducts();
         });
-
-        updateProductCount(antitarnishProducts.length);
-    }
-
-    function updateProductCount(count) {
-        const productCountElement = document.getElementById('product-count');
-        const totalProductsElement = document.getElementById('total-products');
-        if (productCountElement && totalProductsElement) {
-            productCountElement.innerText = count;
-            totalProductsElement.innerText = products.filter(p => p.category === 'Antitarnish').length;
-        }
-    }
-
-    function setupViewToggle() {
-        const viewButtons = document.querySelectorAll('.grid-view');
-        viewButtons.forEach(button => {
-            button.addEventListener('click', (e) => {
-                e.preventDefault();
-                viewButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-                const col = button.getAttribute('data-col');
-                const container = document.getElementById('shop-product-list');
-                container.className = `row masonry-grid col-${col}`;
-                loadAntitarnishProducts();
-            });
-        });
-    }
-</script>
+    });
+}
+    </script>
     </div>
     <!--==============================
         All Js File End
