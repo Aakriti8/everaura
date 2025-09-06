@@ -431,8 +431,8 @@ function loadAearringsProducts() {
         productDiv.setAttribute('data-wow-delay', '0.2s');
         productDiv.innerHTML = `
             <div class="product-style2 version2">
-                ${product.isTrending === 'y' ? '<span class="product-badge">new</span>' : ''}
-                <div class="product-action">
+                ${product.isTrending === 'y' ? '<span class="product-badge"></span>' : ''}
+                <div class="product-action"
                     <button class="product-action__btn"><i class="fal fa-heart"></i></button>
                     <button class="product-action__btn"><i class="fal fa-eye"></i></button>
                 </div>
@@ -487,7 +487,7 @@ function sortAndDisplayProducts() {
         productDiv.setAttribute('data-wow-delay', '0.2s');
         productDiv.innerHTML = `
             <div class="product-style2 version2">
-                ${product.isTrending === 'y' ? '<span class="product-badge">new</span>' : ''}
+                ${product.isTrending === 'y' ? '<span class="product-badge"></span>' : ''}
                 <div class="product-action">
                     <button class="product-action__btn"><i class="fal fa-heart"></i></button>
                     <button class="product-action__btn"><i class="fal fa-eye"></i></button>
