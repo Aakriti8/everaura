@@ -1707,7 +1707,7 @@ textarea.is-invalid {
 }
 
 .vs-mobile-menu ul li a:before {
-    content: "\e5d6";
+    content: "\f179";
     font-family: var(--icon-font);
     position: relative;
     left: 0;
