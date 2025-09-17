@@ -1707,7 +1707,7 @@ textarea.is-invalid {
 }
 
 .vs-mobile-menu ul li a:before {
-    content: "\f105";
+    content: "\e5d6";
     font-family: var(--icon-font);
     position: relative;
     left: 0;
@@ -4298,7 +4298,7 @@ a.text-theme:hover,
 }
 
 .main-menu ul.sub-menu li.menu-item-has-children>a:after {
-    content: "\f105";
+    content: "\e5d6";
     float: right;
     top: 3px
 }
@@ -4309,11 +4309,13 @@ a.text-theme:hover,
 }
 
 .main-menu ul.sub-menu li a:before {
-    content: "\f105";
+    content: "\e5d6";
     font-family: var(--icon-font);
     font-weight: 400;
     margin: 0 10px 0 0
 }
+
+
 
 .main-menu ul.sub-menu li ul.sub-menu {
     left: 100%;
@@ -4327,6 +4329,7 @@ a.text-theme:hover,
     left: 100%;
     right: auto
 }
+
 
 .main-menu .mega-menu-wrap {
     position: static
