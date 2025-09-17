@@ -4397,7 +4397,7 @@ a.text-theme:hover,
 }
 
 .main-menu ul.mega-menu>li>ul>li>a:before {
-    content: "\f105";
+    content: "\e5d6";
     font-family: var(--icon-font);
     font-weight: 400;
     margin: 0 10px 0 0
