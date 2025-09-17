@@ -361,6 +361,17 @@ const products = [
         type: 'Modern',
         category: 'Aearrings',
         isAntiTarnish: 'y'
+    },
+    { 
+        id: 35,
+        name: "Korean Earrings",
+        image: "assets/img/Product list/earring19.jpg",
+        price: 105.00,
+        isTrending: 'y',
+        isBestSelling: 'y',
+        type: 'Modern',
+        category: 'Aearrings',
+        isAntiTarnish: 'y'
     }
 ];
 
